@@ -59,7 +59,7 @@ class DQNAgent:
         self.model.save_weights(name)
 
 
-def train_agent(env, agent, state_sieze, action_size, episodes, max_t, batch_size):
+def train_agent(env, agent, state_size, action_size, episodes, max_t, batch_size):
     for e in range(episodes):
         state = env.reset()
         state = np.reshape(state, [1, state_size])
