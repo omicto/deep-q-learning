@@ -18,7 +18,7 @@ class DQNAgent:
         self.epsilon = kwargs.get("epsilon", 1.0)
         self.epsilon_min = kwargs.get("epsilon_min", 0.01)
         self.epsilon_decay = kwargs.get("epsilon_decay", 0.995)
-        self.learning_rate = 0.001
+        self.learning_rate = kwargs.get("learning_rate", 0.001)
         self.model = self._build_model()
 
     def _build_model(self):
